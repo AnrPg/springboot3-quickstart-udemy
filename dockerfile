@@ -8,5 +8,7 @@ COPY mvnw pom.xml ./
 RUN mvn clean package -DskipTests
 
 COPY src ./src
+# RUN chmod a+x .
+# VOLUME . .
 
 CMD ["./mvnw", "spring-boot:run"]
